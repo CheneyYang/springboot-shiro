@@ -1,2 +1,7 @@
 server:
   port: 9000
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  thymeleaf:
+    cache: false
