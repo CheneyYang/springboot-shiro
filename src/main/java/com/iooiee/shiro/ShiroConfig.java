@@ -40,10 +40,12 @@ public class ShiroConfig {
         Map<String, String> filterMap = new LinkedHashMap<>();
 
         filterMap.put("/index","anon");
+        filterMap.put("/user/login","anon");
+        filterMap.put("/user/toMain","anon");
         filterMap.put("/user/*","authc");
 
         //修改跳转的登录页面
-        shiroFilterFactoryBean.setLoginUrl("/user/login");
+        shiroFilterFactoryBean.setLoginUrl("/user/toLogin");
 
 
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filterMap);
